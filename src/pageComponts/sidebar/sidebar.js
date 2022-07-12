@@ -17,7 +17,7 @@ const sidebar = () => {
   newProjectButton.classList.add("new-project-button");
   newProjectButton.textContent = "New Project";
 
-  createProject.classList.add("create-project");
+  createProject.classList.add("create-project", "hide");
 
   createProjectInput.classList.add("create-project-input");
   createProjectInput.setAttribute("type", "text");
