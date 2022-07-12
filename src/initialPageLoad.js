@@ -1,8 +1,7 @@
+import header from "./pageComponts/header/header";
+
 const initialPageLoad = () => {
-    const h1 = document.createElement("h1");
-    h1.textContent = "Todo List";
-    
-    document.body.append(h1);
-}
+  document.body.append(header());
+};
 
 export default initialPageLoad;
