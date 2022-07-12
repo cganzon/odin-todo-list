@@ -1,3 +1,10 @@
+header {
+    background-color: #e69c15;
+    padding: 1rem;
+}
+
 header h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+    font-size: clamp(2rem, 1.647887323943662rem + 1.5023474178403755vw, 3rem);
+    color: #fff;
 }
