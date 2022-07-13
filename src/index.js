@@ -6,9 +6,10 @@ initialPageLoad();
 const dom = (() => {
   const newProjectButton = document.querySelector(".new-project-button");
   const createProject = document.querySelector(".create-project");
+  const createProjectInput = document.querySelector(".create-project-input");
   const cancelNewProjectButton = document.querySelector(".cancel-new-project");
 
-  return { newProjectButton, createProject, cancelNewProjectButton };
+  return { newProjectButton, createProject, createProjectInput, cancelNewProjectButton };
 })();
 
 dom.newProjectButton.addEventListener("click", (e) => {
@@ -16,5 +17,6 @@ dom.newProjectButton.addEventListener("click", (e) => {
 });
 
 dom.cancelNewProjectButton.addEventListener("click", (e) => {
+  dom.createProjectInput.value = "";
   dom.createProject.classList.add("hide");
 });
