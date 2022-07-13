@@ -150,13 +150,23 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/dom/cacheDOM.js":
+/*!*****************************!*\
+  !*** ./src/dom/cacheDOM.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"cancelNewProjectButton\": () => (/* binding */ cancelNewProjectButton),\n/* harmony export */   \"newProjectButton\": () => (/* binding */ newProjectButton),\n/* harmony export */   \"projectInput\": () => (/* binding */ projectInput),\n/* harmony export */   \"projectWrapper\": () => (/* binding */ projectWrapper)\n/* harmony export */ });\nconst newProjectButton = () =>\r\n  document.querySelector(\".new-project-button\");\r\n\r\nconst projectWrapper = () => document.querySelector(\".project-wrapper\");\r\n\r\nconst projectInput = () => document.querySelector(\".project-input\");\r\n\r\nconst cancelNewProjectButton = () =>\r\n  document.querySelector(\".cancel-project-button\");\r\n\n\n//# sourceURL=webpack://odin-todo-list/./src/dom/cacheDOM.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _initialPageLoad__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./initialPageLoad */ \"./src/initialPageLoad.js\");\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n\r\n\r\n\r\n(0,_initialPageLoad__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\r\nconst dom = (() => {\r\n  const newProjectButton = document.querySelector(\".new-project-button\");\r\n  const projectWrapper = document.querySelector(\".project-wrapper\");\r\n  const projectInput = document.querySelector(\".project-input\");\r\n  const cancelNewProjectButton = document.querySelector(\".cancel-project-button\");\r\n\r\n  return { newProjectButton, projectWrapper, projectInput, cancelNewProjectButton };\r\n})();\r\n\r\ndom.newProjectButton.addEventListener(\"click\", (e) => {\r\n  dom.projectWrapper.classList.remove(\"hide\");\r\n});\r\n\r\ndom.cancelNewProjectButton.addEventListener(\"click\", (e) => {\r\n  dom.projectInput.value = \"\";\r\n  dom.projectWrapper.classList.add(\"hide\");\r\n});\r\n\n\n//# sourceURL=webpack://odin-todo-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _initialPageLoad__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./initialPageLoad */ \"./src/initialPageLoad.js\");\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _dom_cacheDOM__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dom/cacheDOM */ \"./src/dom/cacheDOM.js\");\n\r\n\r\n\r\n\r\n(0,_initialPageLoad__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\r\n(0,_dom_cacheDOM__WEBPACK_IMPORTED_MODULE_2__.newProjectButton)().addEventListener(\"click\", (e) => {\r\n  (0,_dom_cacheDOM__WEBPACK_IMPORTED_MODULE_2__.projectWrapper)().classList.remove(\"hide\");\r\n});\r\n\r\n(0,_dom_cacheDOM__WEBPACK_IMPORTED_MODULE_2__.cancelNewProjectButton)().addEventListener(\"click\", (e) => {\r\n  (0,_dom_cacheDOM__WEBPACK_IMPORTED_MODULE_2__.projectInput)().value = \"\";\r\n  (0,_dom_cacheDOM__WEBPACK_IMPORTED_MODULE_2__.projectWrapper)().classList.add(\"hide\");\r\n});\r\n\n\n//# sourceURL=webpack://odin-todo-list/./src/index.js?");
 
 /***/ }),
 
