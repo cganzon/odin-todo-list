@@ -6,10 +6,15 @@ initialPageLoad();
 const dom = (() => {
   const newProjectButton = document.querySelector(".new-project-button");
   const createProject = document.querySelector(".create-project");
+  const cancelNewProjectButton = document.querySelector(".cancel-new-project");
 
-  return { newProjectButton, createProject };
+  return { newProjectButton, createProject, cancelNewProjectButton };
 })();
 
 dom.newProjectButton.addEventListener("click", (e) => {
   dom.createProject.classList.remove("hide");
+});
+
+dom.cancelNewProjectButton.addEventListener("click", (e) => {
+  dom.createProject.classList.add("hide");
 });
