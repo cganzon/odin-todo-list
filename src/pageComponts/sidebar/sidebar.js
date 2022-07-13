@@ -5,8 +5,8 @@ const sidebar = () => {
   const sidebarTitle = document.createElement("h2");
   const projects = document.createElement("div");
   const newProjectButton = document.createElement("button");
-  const createProject = document.createElement("div");
-  const createProjectInput = document.createElement("input");
+  const projectWrapper = document.createElement("div");
+  const projectInput = document.createElement("input");
   const createProjectButton = document.createElement("button");
   const cancelProjectButton = document.createElement("button");
 
@@ -17,25 +17,25 @@ const sidebar = () => {
   newProjectButton.classList.add("new-project-button");
   newProjectButton.textContent = "New Project";
 
-  createProject.classList.add("create-project", "hide");
+  projectWrapper.classList.add("project-wrapper", "hide");
 
-  createProjectInput.classList.add("create-project-input");
-  createProjectInput.setAttribute("type", "text");
-  createProjectInput.setAttribute("placeholder", "Enter project name");
+  projectInput.classList.add("project-input");
+  projectInput.setAttribute("type", "text");
+  projectInput.setAttribute("placeholder", "Enter project name");
 
-  createProjectButton.classList.add("create-new-project");
+  createProjectButton.classList.add("create-project-button");
   createProjectButton.textContent = "Create";
 
-  cancelProjectButton.classList.add("cancel-new-project");
+  cancelProjectButton.classList.add("cancel-project-button");
   cancelProjectButton.textContent = "Cancel";
 
-  createProject.append(
-    createProjectInput,
+  projectWrapper.append(
+    projectInput,
     createProjectButton,
     cancelProjectButton
   );
 
-  sidebar.append(sidebarTitle, projects, newProjectButton, createProject);
+  sidebar.append(sidebarTitle, projects, newProjectButton, projectWrapper);
 
   return sidebar;
 };
