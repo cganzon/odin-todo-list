@@ -19,6 +19,10 @@ createProjectButton().addEventListener("click", (e) => {
   let inputValue = projectInput().value;
   let newProject = new Project(inputValue);
   console.log(newProject);
+  const projectsArray = JSON.parse(localStorage.getItem("projects"));
+  projectsArray.push(newProject);
+  localStorage.setItem("projects", JSON.stringify(projectsArray));
+  console.log(JSON.parse(localStorage.projects));
 });
 
 cancelNewProjectButton().addEventListener("click", (e) => {
