@@ -8,6 +8,7 @@ import {
   createProjectButton,
   cancelNewProjectButton,
 } from "./dom/cacheDOM";
+import saveProject from "./localStorage/saveProject";
 
 initialPageLoad();
 
@@ -16,13 +17,8 @@ newProjectButton().addEventListener("click", (e) => {
 });
 
 createProjectButton().addEventListener("click", (e) => {
-  let inputValue = projectInput().value;
-  let newProject = new Project(inputValue);
-  console.log(newProject);
-  const projectsArray = JSON.parse(localStorage.getItem("projects"));
-  projectsArray.push(newProject);
-  localStorage.setItem("projects", JSON.stringify(projectsArray));
-  console.log(JSON.parse(localStorage.projects));
+  let project = new Project(projectInput().value);
+  saveProject(project);
 });
 
 cancelNewProjectButton().addEventListener("click", (e) => {
