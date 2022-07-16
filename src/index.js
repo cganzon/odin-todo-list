@@ -21,6 +21,8 @@ createProjectButton().addEventListener("click", (e) => {
   let project = new Project(projectInput().value);
   saveProject(project);
   displayProject(project)
+  projectInput().value = "";
+  projectWrapper().classList.add("hide");
 });
 
 cancelNewProjectButton().addEventListener("click", (e) => {
