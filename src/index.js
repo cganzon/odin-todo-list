@@ -9,6 +9,7 @@ import {
   cancelNewProjectButton,
 } from "./dom/cacheDOM";
 import saveProject from "./localStorage/saveProject";
+import displayProject from "./dom/displayProject";
 
 initialPageLoad();
 
@@ -19,6 +20,7 @@ newProjectButton().addEventListener("click", (e) => {
 createProjectButton().addEventListener("click", (e) => {
   let project = new Project(projectInput().value);
   saveProject(project);
+  displayProject(project)
 });
 
 cancelNewProjectButton().addEventListener("click", (e) => {

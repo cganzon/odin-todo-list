@@ -3,7 +3,7 @@ import "./sidebar.css";
 const sidebar = () => {
   const sidebar = document.createElement("section");
   const sidebarTitle = document.createElement("h2");
-  const projects = document.createElement("div");
+  const projects = document.createElement("ul");
   const newProjectButton = document.createElement("button");
   const projectWrapper = document.createElement("div");
   const projectInput = document.createElement("input");
